@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
@@ -18,41 +17,20 @@ export function Logo({ className }: LogoProps) {
     >
       {/* Logo Icon */}
       <div
-        className="
-          relative
-          flex
-          h-12
-          w-12
-          items-center
-          justify-center
-          overflow-hidden
-          rounded-2xl
-          // bg-linear-to-br
-          from-indigo-600
-          via-violet-600
-          to-cyan-500
-          text-lg
-          font-black
-          text-white
-          shadow-lg
-          transition-all
-          duration-500
-          group-hover:scale-110
-          group-hover:rotate-6
-        "
+        className={cn(
+          "relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl",
+          "bg-gradient-to-br from-indigo-600 via-violet-600 to-cyan-500",
+          "text-lg font-black text-white shadow-lg transition-all duration-500",
+          "group-hover:scale-110 group-hover:rotate-6",
+        )}
       >
         <span className="relative z-10">AR</span>
 
         <div
-          className="
-            absolute
-            inset-0
-            opacity-0
-            transition-opacity
-            duration-500
-            group-hover:opacity-100
-            bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.4),transparent_60%)]
-          "
+          className={cn(
+            "absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100",
+            "bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.4),transparent_60%)]",
+          )}
         />
       </div>
 

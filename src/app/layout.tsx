@@ -27,6 +27,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${sora.variable} ${jetbrainsMono.variable} antialiased`}
+        suppressHydrationWarning
       >
         <Providers>
           <Header />

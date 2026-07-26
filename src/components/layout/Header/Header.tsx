@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
 import { cn } from "@/lib/utils";
 
 import { Logo } from "./Logo";
@@ -31,11 +30,9 @@ export function Header() {
 
       for (const id of sections) {
         const section = document.getElementById(id);
-
         if (!section) continue;
 
         const rect = section.getBoundingClientRect();
-
         if (rect.top <= 120 && rect.bottom >= 120) {
           current = id;
           break;
@@ -45,20 +42,14 @@ export function Header() {
       setActiveSection(current);
     };
 
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
       className={cn(
         "fixed left-0 top-0 z-50 w-full transition-all duration-500",
-
         scrolled
           ? "border-b border-white/10 bg-background/80 shadow-lg backdrop-blur-xl"
           : "bg-transparent",
@@ -66,18 +57,20 @@ export function Header() {
     >
       <div className="container flex h-20 items-center justify-between">
         {/* Logo */}
-
         <Logo />
 
         {/* Desktop Navigation */}
-
         <DesktopNav activeSection={activeSection} />
 
         {/* Right Side */}
-
         <div className="hidden items-center gap-4 lg:flex">
+          {/* ✅ Fixed: Button ke bajaye `asChild` ya simple <a> tag with button classes */}
           <Button variant="outline">
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a
+              href="/resume/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Resume
             </a>
           </Button>
@@ -86,7 +79,6 @@ export function Header() {
         </div>
 
         {/* Mobile Navigation */}
-
         <MobileNav activeSection={activeSection} />
       </div>
     </header>

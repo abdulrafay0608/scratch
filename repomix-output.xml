@@ -1,0 +1,2070 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.gitignore
+AGENTS.md
+CLAUDE.md
+eslint.config.mjs
+how origin
+next.config.ts
+package.json
+postcss.config.mjs
+public/file.svg
+public/globe.svg
+public/next.svg
+public/vercel.svg
+public/window.svg
+README.md
+src/app/favicon.ico
+src/app/globals.css
+src/app/layout.tsx
+src/app/page.tsx
+src/components/layout/Footer/Footer.tsx
+src/components/layout/Header/DesktopNav.tsx
+src/components/layout/Header/Header.tsx
+src/components/layout/Header/index.ts
+src/components/layout/Header/Logo.tsx
+src/components/layout/Header/MobileNav.tsx
+src/components/layout/Header/NavItem.tsx
+src/components/layout/index.ts
+src/components/sections/About/index.ts
+src/components/sections/Contact/index.ts
+src/components/sections/Experience/index.ts
+src/components/sections/Hero/index.ts
+src/components/sections/Projects/index.ts
+src/components/sections/Skills/index.ts
+src/components/ui/AnimatedText.tsx
+src/components/ui/Badge.tsx
+src/components/ui/Button.tsx
+src/components/ui/Card.tsx
+src/components/ui/Container.tsx
+src/components/ui/Section.tsx
+src/components/ui/SectionHeading.tsx
+src/components/ui/SocialButton.tsx
+src/components/ui/ThemeToggle.tsx
+src/data/navigation.ts
+src/lib/constants.ts
+src/lib/site.ts
+src/lib/utils.ts
+src/providers/index.tsx
+src/providers/ThemeProvider.tsx
+tsconfig.json
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path=".gitignore">
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+</file>
+
+<file path="AGENTS.md">
+<!-- BEGIN:nextjs-agent-rules -->
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+<!-- END:nextjs-agent-rules -->
+</file>
+
+<file path="CLAUDE.md">
+@AGENTS.md
+</file>
+
+<file path="eslint.config.mjs">
+import { defineConfig, globalIgnores } from "eslint/config";
+import nextVitals from "eslint-config-next/core-web-vitals";
+import nextTs from "eslint-config-next/typescript";
+
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  // Override default ignores of eslint-config-next.
+  globalIgnores([
+    // Default ignores of eslint-config-next:
+    ".next/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts",
+  ]),
+]);
+
+export default eslintConfig;
+</file>
+
+<file path="how origin">
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=schannel
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+user.name=Abdul Rafay
+user.email=abdulrafay0608@gmail.com
+http.postbuffer=524288000
+http.lowspeedlimit=0
+http.lowspeedtime=999999
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=https://github.com/abdulrafay0608/scratch.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+</file>
+
+<file path="next.config.ts">
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  /* config options here */
+  reactCompiler: true,
+};
+
+export default nextConfig;
+</file>
+
+<file path="postcss.config.mjs">
+const config = {
+  plugins: {
+    "@tailwindcss/postcss": {},
+  },
+};
+
+export default config;
+</file>
+
+<file path="public/file.svg">
+<svg fill="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M14.5 13.5V5.41a1 1 0 0 0-.3-.7L9.8.29A1 1 0 0 0 9.08 0H1.5v13.5A2.5 2.5 0 0 0 4 16h8a2.5 2.5 0 0 0 2.5-2.5m-1.5 0v-7H8v-5H3v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1M9.5 5V2.12L12.38 5zM5.13 5h-.62v1.25h2.12V5zm-.62 3h7.12v1.25H4.5zm.62 3h-.62v1.25h7.12V11z" clip-rule="evenodd" fill="#666" fill-rule="evenodd"/></svg>
+</file>
+
+<file path="public/globe.svg">
+<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g clip-path="url(#a)"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.27 14.1a6.5 6.5 0 0 0 3.67-3.45q-1.24.21-2.7.34-.31 1.83-.97 3.1M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.48-1.52a7 7 0 0 1-.96 0H7.5a4 4 0 0 1-.84-1.32q-.38-.89-.63-2.08a40 40 0 0 0 3.92 0q-.25 1.2-.63 2.08a4 4 0 0 1-.84 1.31zm2.94-4.76q1.66-.15 2.95-.43a7 7 0 0 0 0-2.58q-1.3-.27-2.95-.43a18 18 0 0 1 0 3.44m-1.27-3.54a17 17 0 0 1 0 3.64 39 39 0 0 1-4.3 0 17 17 0 0 1 0-3.64 39 39 0 0 1 4.3 0m1.1-1.17q1.45.13 2.69.34a6.5 6.5 0 0 0-3.67-3.44q.65 1.26.98 3.1M8.48 1.5l.01.02q.41.37.84 1.31.38.89.63 2.08a40 40 0 0 0-3.92 0q.25-1.2.63-2.08a4 4 0 0 1 .85-1.32 7 7 0 0 1 .96 0m-2.75.4a6.5 6.5 0 0 0-3.67 3.44 29 29 0 0 1 2.7-.34q.31-1.83.97-3.1M4.58 6.28q-1.66.16-2.95.43a7 7 0 0 0 0 2.58q1.3.27 2.95.43a18 18 0 0 1 0-3.44m.17 4.71q-1.45-.12-2.69-.34a6.5 6.5 0 0 0 3.67 3.44q-.65-1.27-.98-3.1" fill="#666"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs></svg>
+</file>
+
+<file path="public/next.svg">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 394 80"><path fill="#000" d="M262 0h68.5v12.7h-27.2v66.6h-13.6V12.7H262V0ZM149 0v12.7H94v20.4h44.3v12.6H94v21h55v12.6H80.5V0h68.7zm34.3 0h-17.8l63.8 79.4h17.9l-32-39.7 32-39.6h-17.9l-23 28.6-23-28.6zm18.3 56.7-9-11-27.1 33.7h17.8l18.3-22.7z"/><path fill="#000" d="M81 79.3 17 0H0v79.3h13.6V17l50.2 62.3H81Zm252.6-.4c-1 0-1.8-.4-2.5-1s-1.1-1.6-1.1-2.6.3-1.8 1-2.5 1.6-1 2.6-1 1.8.3 2.5 1a3.4 3.4 0 0 1 .6 4.3 3.7 3.7 0 0 1-3 1.8zm23.2-33.5h6v23.3c0 2.1-.4 4-1.3 5.5a9.1 9.1 0 0 1-3.8 3.5c-1.6.8-3.5 1.3-5.7 1.3-2 0-3.7-.4-5.3-1s-2.8-1.8-3.7-3.2c-.9-1.3-1.4-3-1.4-5h6c.1.8.3 1.6.7 2.2s1 1.2 1.6 1.5c.7.4 1.5.5 2.4.5 1 0 1.8-.2 2.4-.6a4 4 0 0 0 1.6-1.8c.3-.8.5-1.8.5-3V45.5zm30.9 9.1a4.4 4.4 0 0 0-2-3.3 7.5 7.5 0 0 0-4.3-1.1c-1.3 0-2.4.2-3.3.5-.9.4-1.6 1-2 1.6a3.5 3.5 0 0 0-.3 4c.3.5.7.9 1.3 1.2l1.8 1 2 .5 3.2.8c1.3.3 2.5.7 3.7 1.2a13 13 0 0 1 3.2 1.8 8.1 8.1 0 0 1 3 6.5c0 2-.5 3.7-1.5 5.1a10 10 0 0 1-4.4 3.5c-1.8.8-4.1 1.2-6.8 1.2-2.6 0-4.9-.4-6.8-1.2-2-.8-3.4-2-4.5-3.5a10 10 0 0 1-1.7-5.6h6a5 5 0 0 0 3.5 4.6c1 .4 2.2.6 3.4.6 1.3 0 2.5-.2 3.5-.6 1-.4 1.8-1 2.4-1.7a4 4 0 0 0 .8-2.4c0-.9-.2-1.6-.7-2.2a11 11 0 0 0-2.1-1.4l-3.2-1-3.8-1c-2.8-.7-5-1.7-6.6-3.2a7.2 7.2 0 0 1-2.4-5.7 8 8 0 0 1 1.7-5 10 10 0 0 1 4.3-3.5c2-.8 4-1.2 6.4-1.2 2.3 0 4.4.4 6.2 1.2 1.8.8 3.2 2 4.3 3.4 1 1.4 1.5 3 1.5 5h-5.8z"/></svg>
+</file>
+
+<file path="public/vercel.svg">
+<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1155 1000"><path d="m577.3 0 577.4 1000H0z" fill="#fff"/></svg>
+</file>
+
+<file path="public/window.svg">
+<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 2.5h13v10a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1zM0 1h16v11.5a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 0 12.5zm3.75 4.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5M7 4.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m1.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5" fill="#666"/></svg>
+</file>
+
+<file path="README.md">
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+</file>
+
+<file path="src/components/layout/Footer/Footer.tsx">
+
+</file>
+
+<file path="src/components/layout/Header/DesktopNav.tsx">
+"use client";
+
+import { NAVIGATION } from "@/data/navigation";
+import { NavItem } from "./NavItem";
+
+interface DesktopNavProps {
+  activeSection?: string;
+}
+
+export function DesktopNav({ activeSection = "home" }: DesktopNavProps) {
+  return (
+    <nav
+      className="hidden items-center gap-8 lg:flex"
+      aria-label="Primary Navigation"
+    >
+      {NAVIGATION.map((item) => (
+        <NavItem
+          key={item.href}
+          href={item.href}
+          label={item.title}
+          active={activeSection === item.href.replace("#", "")}
+        />
+      ))}
+    </nav>
+  );
+}
+</file>
+
+<file path="src/components/layout/Header/Header.tsx">
+"use client";
+
+import { useEffect, useState } from "react";
+
+import { cn } from "@/lib/utils";
+
+import { Logo } from "./Logo";
+import { DesktopNav } from "./DesktopNav";
+import { MobileNav } from "./MobileNav";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { Button } from "@/components/ui/Button";
+
+export function Header() {
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+
+      const sections = [
+        "home",
+        "about",
+        "skills",
+        "experience",
+        "projects",
+        "contact",
+      ];
+
+      let current = "home";
+
+      for (const id of sections) {
+        const section = document.getElementById(id);
+
+        if (!section) continue;
+
+        const rect = section.getBoundingClientRect();
+
+        if (rect.top <= 120 && rect.bottom >= 120) {
+          current = id;
+          break;
+        }
+      }
+
+      setActiveSection(current);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
+    <header
+      className={cn(
+        "fixed left-0 top-0 z-50 w-full transition-all duration-500",
+
+        scrolled
+          ? "border-b border-white/10 bg-background/80 shadow-lg backdrop-blur-xl"
+          : "bg-transparent",
+      )}
+    >
+      <div className="container flex h-20 items-center justify-between">
+        {/* Logo */}
+
+        <Logo />
+
+        {/* Desktop Navigation */}
+
+        <DesktopNav activeSection={activeSection} />
+
+        {/* Right Side */}
+
+        <div className="hidden items-center gap-4 lg:flex">
+          <Button variant="outline">
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              Resume
+            </a>
+          </Button>
+
+          <ThemeToggle />
+        </div>
+
+        {/* Mobile Navigation */}
+
+        <MobileNav activeSection={activeSection} />
+      </div>
+    </header>
+  );
+}
+</file>
+
+<file path="src/components/layout/Header/index.ts">
+export * from "./Header";
+export * from "./Logo";
+export * from "./DesktopNav";
+export * from "./MobileNav";
+export * from "./NavItem";
+</file>
+
+<file path="src/components/layout/Header/Logo.tsx">
+import Link from "next/link";
+
+import { cn } from "@/lib/utils";
+
+interface LogoProps {
+  className?: string;
+}
+
+export function Logo({ className }: LogoProps) {
+  return (
+    <Link
+      href="/"
+      aria-label="Abdul Rafay Portfolio"
+      className={cn(
+        "group inline-flex items-center gap-3 select-none",
+        className,
+      )}
+    >
+      {/* Logo Icon */}
+      <div
+        className="
+          relative
+          flex
+          h-12
+          w-12
+          items-center
+          justify-center
+          overflow-hidden
+          rounded-2xl
+          // bg-linear-to-br
+          from-indigo-600
+          via-violet-600
+          to-cyan-500
+          text-lg
+          font-black
+          text-white
+          shadow-lg
+          transition-all
+          duration-500
+          group-hover:scale-110
+          group-hover:rotate-6
+        "
+      >
+        <span className="relative z-10">AR</span>
+
+        <div
+          className="
+            absolute
+            inset-0
+            opacity-0
+            transition-opacity
+            duration-500
+            group-hover:opacity-100
+            bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.4),transparent_60%)]
+          "
+        />
+      </div>
+
+      {/* Brand Name */}
+      <div className="hidden sm:flex flex-col leading-none">
+        <span className="font-heading text-lg font-bold tracking-tight">
+          Abdul Rafay
+        </span>
+
+        <span className="text-xs tracking-[0.25em] uppercase text-muted-foreground">
+          Full Stack Developer
+        </span>
+      </div>
+    </Link>
+  );
+}
+</file>
+
+<file path="src/components/layout/Header/MobileNav.tsx">
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+
+import { NAVIGATION } from "@/data/navigation";
+import { Button } from "@/components/ui/Button";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { cn } from "@/lib/utils";
+
+interface MobileNavProps {
+  activeSection?: string;
+}
+
+export function MobileNav({ activeSection = "home" }: MobileNavProps) {
+  const [open, setOpen] = useState(false);
+
+  const closeMenu = () => setOpen(false);
+
+  return (
+    <>
+      {/* Mobile Menu Button */}
+      <Button
+        variant="ghost"
+        size="icon"
+        className="lg:hidden"
+        aria-label="Toggle Navigation"
+        onClick={() => setOpen(!open)}
+      >
+        {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+      </Button>
+
+      {/* Backdrop */}
+      <div
+        onClick={closeMenu}
+        className={cn(
+          "fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden",
+          open
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0",
+        )}
+      />
+
+      {/* Drawer */}
+      <aside
+        className={cn(
+          "fixed top-0 right-0 z-50 h-screen w-[320px]",
+          "border-l border-border bg-background/95 backdrop-blur-xl",
+          "transition-transform duration-500 ease-in-out",
+          open ? "translate-x-0" : "translate-x-full",
+        )}
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between border-b border-border p-6">
+          <h3 className="text-lg font-semibold">Navigation</h3>
+
+          <Button variant="ghost" size="icon" onClick={closeMenu}>
+            <X className="h-5 w-5" />
+          </Button>
+        </div>
+
+        {/* Navigation */}
+        <nav className="flex flex-col gap-2 p-6">
+          {NAVIGATION.map((item) => {
+            const active = activeSection === item.href.replace("#", "");
+
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={closeMenu}
+                className={cn(
+                  "rounded-xl px-4 py-3 transition-all duration-300",
+                  active
+                    ? "bg-primary text-primary-foreground"
+                    : "hover:bg-muted",
+                )}
+              >
+                {item.title}
+              </Link>
+            );
+          })}
+        </nav>
+
+        {/* Bottom Actions */}
+        <div className="mt-auto border-t border-border p-6 space-y-4">
+          <Button className="w-full">Download Resume</Button>
+
+          <div className="flex items-center justify-between">
+            <span className="text-sm text-muted-foreground">Theme</span>
+
+            <ThemeToggle />
+          </div>
+        </div>
+      </aside>
+    </>
+  );
+}
+</file>
+
+<file path="src/components/layout/Header/NavItem.tsx">
+"use client";
+
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+
+interface NavItemProps {
+  href: string;
+  label: string;
+  active?: boolean;
+  onClick?: () => void;
+}
+
+export function NavItem({
+  href,
+  label,
+  active = false,
+  onClick,
+}: NavItemProps) {
+  return (
+    <Link
+      href={href}
+      onClick={onClick}
+      aria-current={active ? "page" : undefined}
+      className={cn(
+        "group relative inline-flex items-center",
+        "px-2 py-2",
+        "text-sm font-medium",
+        "transition-colors duration-300",
+        active ? "text-primary" : "text-muted-foreground hover:text-foreground",
+      )}
+    >
+      {label}
+
+      <span
+        className={cn(
+          "absolute",
+          "bottom-0 left-0",
+          "h-0.5",
+          "rounded-full",
+          "bg-primary",
+          "transition-all duration-300",
+
+          active ? "w-full" : "w-0 group-hover:w-full",
+        )}
+      />
+    </Link>
+  );
+}
+</file>
+
+<file path="src/components/layout/index.ts">
+
+</file>
+
+<file path="src/components/sections/About/index.ts">
+
+</file>
+
+<file path="src/components/sections/Contact/index.ts">
+
+</file>
+
+<file path="src/components/sections/Experience/index.ts">
+
+</file>
+
+<file path="src/components/sections/Hero/index.ts">
+
+</file>
+
+<file path="src/components/sections/Projects/index.ts">
+
+</file>
+
+<file path="src/components/sections/Skills/index.ts">
+
+</file>
+
+<file path="src/components/ui/AnimatedText.tsx">
+"use client";
+
+import * as React from "react";
+
+import { cn } from "@/lib/utils";
+
+type AnimatedTextProps = {
+  title: string;
+  highlight?: string;
+
+  as?: React.ElementType;
+
+  align?: "left" | "center";
+
+  size?: "sm" | "md" | "lg" | "xl";
+
+  className?: string;
+};
+
+const sizeClasses = {
+  sm: "text-3xl md:text-4xl",
+
+  md: "text-4xl md:text-5xl",
+
+  lg: "text-5xl md:text-6xl lg:text-7xl",
+
+  xl: "text-6xl md:text-7xl lg:text-8xl",
+};
+
+export function AnimatedText({
+  title,
+  highlight,
+  as: Component = "h1",
+  align = "left",
+  size = "lg",
+  className,
+}: AnimatedTextProps) {
+  const parts = highlight ? title.split(highlight) : [title];
+
+  return (
+    <Component
+      className={cn(
+        "font-heading font-bold tracking-tight leading-[1.05]",
+
+        sizeClasses[size],
+
+        align === "center" ? "text-center" : "text-left",
+
+        className,
+      )}
+    >
+      {parts[0]}
+
+      {highlight && <span className="gradient-text">{highlight}</span>}
+
+      {parts[1]}
+    </Component>
+  );
+}
+</file>
+
+<file path="src/components/ui/Badge.tsx">
+import * as React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+
+import { cn } from "@/lib/utils";
+
+const badgeVariants = cva(
+  [
+    "inline-flex",
+    "items-center",
+    "justify-center",
+    "gap-2",
+    "rounded-full",
+    "border",
+    "font-medium",
+    "transition-all",
+    "duration-300",
+    "select-none",
+    "whitespace-nowrap",
+  ],
+  {
+    variants: {
+      variant: {
+        default:
+          "border-slate-200 bg-slate-100 text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200",
+
+        primary: "border-indigo-500/20 bg-indigo-500/10 text-indigo-500",
+
+        secondary: "border-cyan-500/20 bg-cyan-500/10 text-cyan-500",
+
+        success: "border-emerald-500/20 bg-emerald-500/10 text-emerald-500",
+
+        warning: "border-amber-500/20 bg-amber-500/10 text-amber-500",
+
+        danger: "border-red-500/20 bg-red-500/10 text-red-500",
+
+        outline: "border-border bg-transparent text-foreground",
+      },
+
+      size: {
+        sm: "px-3 py-1 text-xs",
+
+        md: "px-4 py-1.5 text-sm",
+
+        lg: "px-5 py-2 text-base",
+      },
+    },
+
+    defaultVariants: {
+      variant: "primary",
+      size: "md",
+    },
+  },
+);
+
+export interface BadgeProps
+  extends
+    React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof badgeVariants> {
+  icon?: React.ReactNode;
+}
+
+export function Badge({
+  className,
+  variant,
+  size,
+  icon,
+  children,
+  ...props
+}: BadgeProps) {
+  return (
+    <div
+      className={cn(
+        badgeVariants({
+          variant,
+          size,
+        }),
+        className,
+      )}
+      {...props}
+    >
+      {icon}
+
+      {children}
+    </div>
+  );
+}
+</file>
+
+<file path="src/components/ui/Button.tsx">
+"use client";
+
+import * as React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+
+import { cn } from "@/lib/utils";
+
+const buttonVariants = cva(
+  [
+    "inline-flex",
+    "items-center",
+    "justify-center",
+    "gap-2",
+    "rounded-xl",
+    "font-medium",
+    "transition-all",
+    "duration-300",
+    "outline-none",
+    "disabled:pointer-events-none",
+    "disabled:opacity-50",
+    "focus-visible:ring-2",
+    "focus-visible:ring-indigo-500",
+  ],
+  {
+    variants: {
+      variant: {
+        primary: "bg-indigo-600 text-white hover:bg-indigo-700",
+
+        secondary:
+          "bg-slate-200 text-slate-900 hover:bg-slate-300 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700",
+
+        outline:
+          "border border-slate-300 hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800",
+
+        ghost: "hover:bg-slate-100 dark:hover:bg-slate-800",
+      },
+
+      size: {
+        sm: "h-9 px-4 text-sm",
+
+        md: "h-11 px-6",
+
+        lg: "h-14 px-8 text-lg",
+
+        icon: "h-11 w-11",
+      },
+    },
+
+    defaultVariants: {
+      variant: "primary",
+      size: "md",
+    },
+  },
+);
+
+export interface ButtonProps
+  extends
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  loading?: boolean;
+
+  leftIcon?: React.ReactNode;
+
+  rightIcon?: React.ReactNode;
+}
+
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  (
+    {
+      className,
+      variant,
+      size,
+      loading,
+      leftIcon,
+      rightIcon,
+      children,
+      ...props
+    },
+    ref,
+  ) => {
+    return (
+      <button
+        ref={ref}
+        className={cn(
+          buttonVariants({
+            variant,
+            size,
+          }),
+          className,
+        )}
+        disabled={loading || props.disabled}
+        {...props}
+      >
+        {loading ? <Loader /> : leftIcon}
+
+        {children}
+
+        {!loading && rightIcon}
+      </button>
+    );
+  },
+);
+
+Button.displayName = "Button";
+
+function Loader() {
+  return (
+    <span
+      className="
+      h-4
+      w-4
+      animate-spin
+      rounded-full
+      border-2
+      border-current
+      border-t-transparent
+      "
+    />
+  );
+}
+</file>
+
+<file path="src/components/ui/Card.tsx">
+import * as React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+
+import { cn } from "@/lib/utils";
+
+const cardVariants = cva(
+  [
+    "relative",
+    "overflow-hidden",
+    "rounded-3xl",
+    "transition-all",
+    "duration-500",
+    "border",
+  ],
+  {
+    variants: {
+      variant: {
+        default:
+          "border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900",
+
+        glass: "border-white/10 bg-white/5 backdrop-blur-xl",
+
+        outline: "border-slate-300 bg-transparent dark:border-slate-700",
+
+        gradient:
+          "border-transparent bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white",
+
+        spotlight: "border-slate-800 bg-slate-950",
+      },
+
+      hover: {
+        true: "hover:-translate-y-2 hover:shadow-2xl hover:border-indigo-500/40",
+
+        false: "",
+      },
+
+      padding: {
+        none: "p-0",
+
+        sm: "p-4",
+
+        md: "p-6",
+
+        lg: "p-8",
+      },
+    },
+
+    defaultVariants: {
+      variant: "default",
+      hover: true,
+      padding: "md",
+    },
+  },
+);
+
+export interface CardProps
+  extends
+    React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof cardVariants> {}
+
+export function Card({
+  className,
+  variant,
+  hover,
+  padding,
+  children,
+  ...props
+}: CardProps) {
+  return (
+    <div
+      className={cn(
+        cardVariants({
+          variant,
+          hover,
+          padding,
+        }),
+        className,
+      )}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+}
+</file>
+
+<file path="src/components/ui/Container.tsx">
+import * as React from "react";
+
+import { cn } from "@/lib/utils";
+
+interface ContainerProps {
+  children: React.ReactNode;
+
+  className?: string;
+
+  as?: React.ElementType;
+}
+
+export function Container({
+  children,
+
+  className,
+
+  as: Component = "div",
+}: ContainerProps) {
+  return (
+    <Component
+      className={cn(
+        "mx-auto",
+
+        "w-full",
+
+        "max-w-7xl",
+
+        "px-5",
+
+        "sm:px-6",
+
+        "lg:px-8",
+
+        className,
+      )}
+    >
+      {children}
+    </Component>
+  );
+}
+</file>
+
+<file path="src/components/ui/Section.tsx">
+import * as React from "react";
+
+import { cn } from "@/lib/utils";
+
+type SectionBackground = "transparent" | "default" | "muted" | "gradient";
+
+interface SectionProps extends React.HTMLAttributes<HTMLElement> {
+  id?: string;
+
+  children: React.ReactNode;
+
+  background?: SectionBackground;
+
+  as?: React.ElementType;
+}
+
+const backgroundVariants = {
+  transparent: "",
+
+  default: "bg-background",
+
+  muted: "bg-muted/30",
+
+  gradient:
+    "bg-[radial-gradient(circle_at_top,rgba(99,102,241,0.12),transparent_60%)]",
+};
+
+export function Section({
+  id,
+  children,
+  className,
+  background = "transparent",
+  as: Component = "section",
+  ...props
+}: SectionProps) {
+  return (
+    <Component
+      id={id}
+      className={cn(
+        "relative",
+        "scroll-mt-24",
+        "py-20",
+        "sm:py-24",
+        "lg:py-32",
+        backgroundVariants[background],
+        className,
+      )}
+      {...props}
+    >
+      {children}
+    </Component>
+  );
+}
+</file>
+
+<file path="src/components/ui/SectionHeading.tsx">
+import { cn } from "@/lib/utils";
+
+interface SectionHeadingProps {
+  badge?: string;
+  title: string;
+  gradient?: string;
+  description?: string;
+  align?: "left" | "center";
+  className?: string;
+}
+
+export function SectionHeading({
+  badge,
+  title,
+  gradient,
+  description,
+  align = "center",
+  className,
+}: SectionHeadingProps) {
+  const isCenter = align === "center";
+
+  return (
+    <div
+      className={cn(
+        "mb-16 flex flex-col",
+        isCenter ? "items-center text-center" : "items-start text-left",
+        className,
+      )}
+    >
+      {badge && (
+        <span
+          className="
+            mb-4
+            inline-flex
+            items-center
+            rounded-full
+            border
+            border-indigo-500/20
+            bg-indigo-500/10
+            px-4
+            py-1
+            text-sm
+            font-medium
+            tracking-wider
+            uppercase
+            text-indigo-500
+          "
+        >
+          {badge}
+        </span>
+      )}
+
+      <h2
+        className="
+          max-w-4xl
+          font-heading
+          text-4xl
+          font-bold
+          leading-tight
+          tracking-tight
+          sm:text-5xl
+          lg:text-6xl
+        "
+      >
+        {title}
+
+        {gradient && (
+          <>
+            {" "}
+            <span className="gradient-text">{gradient}</span>
+          </>
+        )}
+      </h2>
+
+      {description && (
+        <p
+          className="
+            mt-6
+            max-w-2xl
+            text-base
+            leading-8
+            text-muted
+            sm:text-lg
+          "
+        >
+          {description}
+        </p>
+      )}
+    </div>
+  );
+}
+</file>
+
+<file path="src/components/ui/SocialButton.tsx">
+"use client";
+
+import Link from "next/link";
+import * as React from "react";
+import { ExternalLink } from "lucide-react";
+
+import { cn } from "@/lib/utils";
+
+interface SocialButtonProps {
+  href: string;
+  icon: React.ReactNode;
+  label: string;
+
+  className?: string;
+
+  variant?: "default" | "glass";
+
+  size?: "sm" | "md" | "lg";
+
+  external?: boolean;
+
+  showLabel?: boolean;
+}
+
+const sizeClasses = {
+  sm: {
+    button: "h-10 w-10",
+    icon: "h-4 w-4",
+  },
+
+  md: {
+    button: "h-12 w-12",
+    icon: "h-5 w-5",
+  },
+
+  lg: {
+    button: "h-14 w-14",
+    icon: "h-6 w-6",
+  },
+};
+
+export function SocialButton({
+  href,
+  icon,
+  label,
+  className,
+  variant = "glass",
+  size = "md",
+  external = true,
+  showLabel = false,
+}: SocialButtonProps) {
+  const currentSize = sizeClasses[size];
+
+  return (
+    <Link
+      href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
+      aria-label={label}
+      className={cn(
+        "group inline-flex items-center gap-3 transition-all duration-300",
+
+        showLabel && "rounded-full px-5 py-3",
+
+        !showLabel && cn(currentSize.button, "justify-center rounded-full"),
+
+        variant === "glass"
+          ? "border border-white/10 bg-white/5 backdrop-blur-xl hover:border-indigo-500/40 hover:bg-indigo-500/10"
+          : "border border-border bg-background hover:bg-muted",
+
+        className,
+      )}
+    >
+      <span
+        className={cn(
+          currentSize.icon,
+          "flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-0.5",
+        )}
+      >
+        {icon}
+      </span>
+
+      {showLabel && (
+        <>
+          <span className="text-sm font-medium">{label}</span>
+
+          {external && (
+            <ExternalLink className="h-4 w-4 opacity-60 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          )}
+        </>
+      )}
+    </Link>
+  );
+}
+</file>
+
+<file path="src/components/ui/ThemeToggle.tsx">
+"use client";
+
+import * as React from "react";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
+
+import { Button } from "@/components/ui/Button";
+
+export function ThemeToggle() {
+  const { resolvedTheme, setTheme } = useTheme();
+
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <Button size="icon" variant="ghost" aria-label="Toggle theme">
+        <div className="h-5 w-5" />
+      </Button>
+    );
+  }
+
+  const isDark = resolvedTheme === "dark";
+
+  return (
+    <Button
+      size="icon"
+      variant="ghost"
+      aria-label="Toggle theme"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+    >
+      {isDark ? (
+        <Sun className="h-5 w-5 transition-transform duration-300 hover:rotate-180" />
+      ) : (
+        <Moon className="h-5 w-5 transition-transform duration-300 hover:-rotate-12" />
+      )}
+    </Button>
+  );
+}
+</file>
+
+<file path="src/data/navigation.ts">
+export const NAVIGATION = [
+  { title: "Home", href: "#home" },
+
+  { title: "About", href: "#about" },
+
+  { title: "Skills", href: "#skills" },
+
+  { title: "Experience", href: "#experience" },
+
+  { title: "Projects", href: "#projects" },
+
+  { title: "Contact", href: "#contact" },
+] as const;
+</file>
+
+<file path="src/lib/constants.ts">
+/**
+ * ==========================================================
+ * Portfolio Constants
+ * Single Source of Truth
+ * ==========================================================
+ */
+
+export const SITE_CONFIG = {
+  name: "Abdul Rafay",
+
+  shortName: "AR",
+
+  title: "Abdul Rafay | Full Stack MERN Developer",
+
+  description:
+    "Full Stack MERN Developer specializing in React, Next.js, Node.js, Express.js, MongoDB and modern web applications.",
+
+  url: "https://abdulrafay-developer.vercel.app",
+
+  author: "Abdul Rafay",
+
+  location: "Karachi, Pakistan",
+
+  email: "abdulrafay0608@gmail.com",
+
+  phone: "+92 316 0025 477",
+
+  keywords: [
+    "Abdul Rafay",
+    "Portfolio",
+    "Full Stack Developer",
+    "MERN Stack",
+    "React Developer",
+    "Next.js Developer",
+    "Node.js",
+    "JavaScript",
+    "TypeScript",
+  ],
+} as const;
+
+export const NAV_LINKS = [
+  { id: 1, title: "Home", href: "/" },
+
+  { id: 2, title: "About", href: "#about" },
+
+  { id: 3, title: "Experience", href: "#experience" },
+
+  { id: 4, title: "Skills", href: "#skills" },
+
+  { id: 5, title: "Projects", href: "#projects" },
+
+  { id: 6, title: "Testimonials", href: "#testimonials" },
+
+  { id: 7, title: "Contact", href: "#contact" },
+] as const;
+
+export const SOCIAL_LINKS = {
+  github: "https://github.com/abdulrafay0608",
+
+  linkedin: "https://linkedin.com/in/abdulrafay0608",
+
+  twitter: "",
+
+  instagram: "",
+
+  email: "mailto:abdulrafay0608@gmail.com",
+} as const;
+
+export const THEME = {
+  defaultTheme: "dark",
+
+  enableSystem: true,
+} as const;
+
+export const ANIMATION = {
+  duration: 0.5,
+
+  delay: 0.2,
+
+  stagger: 0.15,
+
+  ease: "easeInOut",
+} as const;
+
+export const LAYOUT = {
+  maxWidth: "1440px",
+
+  container: "max-w-7xl",
+
+  sectionSpacing: "py-28",
+} as const;
+
+export const BUTTON_VARIANTS = {
+  primary: "primary",
+
+  secondary: "secondary",
+
+  outline: "outline",
+
+  ghost: "ghost",
+} as const;
+
+export const SKILL_CATEGORIES = [
+  "Frontend",
+
+  "Backend",
+
+  "Database",
+
+  "Tools",
+
+  "Deployment",
+] as const;
+
+export const CONTACT = {
+  availability: "Available for Freelance",
+
+  responseTime: "Usually replies within 24 hours",
+} as const;
+</file>
+
+<file path="src/lib/site.ts">
+import type { Metadata } from "next";
+import { SITE_CONFIG } from "./constants";
+
+export const siteMetadata: Metadata = {
+  metadataBase: new URL(SITE_CONFIG.url),
+
+  title: {
+    default: SITE_CONFIG.title,
+    template: `%s | ${SITE_CONFIG.name}`,
+  },
+
+  description: SITE_CONFIG.description,
+
+  applicationName: SITE_CONFIG.name,
+
+  authors: [
+    {
+      name: SITE_CONFIG.author,
+      url: SITE_CONFIG.url,
+    },
+  ],
+
+  creator: SITE_CONFIG.author,
+
+  publisher: SITE_CONFIG.author,
+
+  keywords: [...SITE_CONFIG.keywords],
+
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: SITE_CONFIG.url,
+    title: SITE_CONFIG.title,
+    description: SITE_CONFIG.description,
+    siteName: SITE_CONFIG.name,
+
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: SITE_CONFIG.title,
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_CONFIG.title,
+    description: SITE_CONFIG.description,
+
+    images: ["/images/og-image.png"],
+  },
+
+  category: "technology",
+};
+</file>
+
+<file path="src/lib/utils.ts">
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+/**
+ * Merge Tailwind classes safely.
+ *
+ * Example:
+ * cn("p-4", "bg-red-500", isActive && "bg-blue-500")
+ *
+ * Result:
+ * "p-4 bg-blue-500"
+ */
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+</file>
+
+<file path="src/providers/index.tsx">
+"use client";
+
+import * as React from "react";
+
+import { ThemeProvider } from "./ThemeProvider";
+
+interface ProvidersProps {
+  children: React.ReactNode;
+}
+
+export function Providers({ children }: ProvidersProps) {
+  return (
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="dark"
+      enableSystem
+      disableTransitionOnChange
+    >
+      {children}
+    </ThemeProvider>
+  );
+}
+</file>
+
+<file path="src/providers/ThemeProvider.tsx">
+"use client";
+
+import * as React from "react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+import type { ThemeProviderProps } from "next-themes";
+
+export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
+  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
+}
+</file>
+
+<file path="tsconfig.json">
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts"
+  ],
+  "exclude": ["node_modules"]
+}
+</file>
+
+<file path="package.json">
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.26.0",
+    "next": "16.2.11",
+    "next-themes": "^0.4.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "tailwind-merge": "^3.6.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.11",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
+</file>
+
+<file path="src/app/globals.css">
+@import "tailwindcss";
+
+@theme inline {
+
+  --font-body: var(--font-inter);
+
+  --font-heading: var(--font-sora);
+
+  --font-mono: var(--font-mono);
+
+}
+
+:root {
+
+  --background: #ffffff;
+
+  --foreground: #0f172a;
+
+  --card: #ffffff;
+
+  --card-border: #e2e8f0;
+
+  --primary: #6366f1;
+
+  --secondary: #06b6d4;
+
+  --muted: #64748b;
+
+  --accent: #8b5cf6;
+
+  --success: #10b981;
+
+  --danger: #ef4444;
+
+}
+
+.dark {
+
+  --background: #030712;
+
+  --foreground: #f8fafc;
+
+  --card: #111827;
+
+  --card-border: #1f2937;
+
+  --primary: #818cf8;
+
+  --secondary: #22d3ee;
+
+  --muted: #94a3b8;
+
+  --accent: #a78bfa;
+
+  --success: #34d399;
+
+  --danger: #f87171;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+body {
+
+  background: var(--background);
+
+  color: var(--foreground);
+
+  font-family: var(--font-body);
+
+  overflow-x: hidden;
+
+  text-rendering: optimizeLegibility;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  font-family: var(--font-heading);
+
+  font-weight: 700;
+
+}
+
+img {
+
+  display: block;
+
+  max-width: 100%;
+
+}
+
+a {
+
+  color: inherit;
+
+  text-decoration: none;
+
+}
+
+button {
+
+  cursor: pointer;
+
+  border: none;
+
+  background: none;
+
+}
+
+::selection {
+
+  background: var(--primary);
+
+  color: white;
+
+}
+
+::-webkit-scrollbar {
+
+  width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+  background: var(--background);
+
+}
+
+::-webkit-scrollbar-thumb {
+
+  background: var(--primary);
+
+  border-radius: 999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+  background: var(--secondary);
+
+}
+
+.container {
+
+  width: 100%;
+
+  max-width: 1280px;
+
+  margin-inline: auto;
+
+  padding-inline: 24px;
+
+}
+
+.section {
+
+  padding-block: 120px;
+
+}
+
+.gradient-text {
+
+  background: linear-gradient(to right,
+      #818cf8,
+      #06b6d4);
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+}
+
+.glass {
+
+  backdrop-filter: blur(20px);
+
+  background: rgba(255, 255, 255, .05);
+
+  border: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+.glow {
+
+  box-shadow:
+
+    0 0 40px rgba(99, 102, 241, .35);
+
+}
+
+:focus-visible {
+
+  outline: 2px solid var(--primary);
+
+  outline-offset: 4px;
+
+}
+
+@keyframes float {
+
+  0% {
+
+    transform: translateY(0);
+
+  }
+
+  50% {
+
+    transform: translateY(-12px);
+
+  }
+
+  100% {
+
+    transform: translateY(0);
+
+  }
+
+}
+
+.float {
+
+  animation: float 6s ease-in-out infinite;
+
+}
+</file>
+
+<file path="src/app/layout.tsx">
+import type { Metadata } from "next";
+import { Inter, JetBrains_Mono, Sora } from "next/font/google";
+
+import "./globals.css";
+
+import { siteMetadata } from "@/lib/site";
+import { Providers } from "@/providers";
+import { Header } from "@/components/layout/Header";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+
+const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
+
+export const metadata: Metadata = siteMetadata;
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${inter.variable} ${sora.variable} ${jetbrainsMono.variable} antialiased`}
+      >
+        <Providers>
+          <Header />
+
+          <main>{children}</main>
+        </Providers>
+      </body>
+    </html>
+  );
+}
+</file>
+
+<file path="src/app/page.tsx">
+import Image from "next/image";
+
+export default function Home() {
+  return (
+    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      {/* <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+        <Image
+          className="dark:invert"
+          src="/next.svg"
+          alt="Next.js logo"
+          width={100}
+          height={20}
+          priority
+        />
+        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
+          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
+            To get started, edit the page.tsx file.
+          </h1>
+          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+            Looking for a starting point or more instructions? Head over to{" "}
+            <a
+              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+              className="font-medium text-zinc-950 dark:text-zinc-50"
+            >
+              Templates
+            </a>{" "}
+            or the{" "}
+            <a
+              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+              className="font-medium text-zinc-950 dark:text-zinc-50"
+            >
+              Learning
+            </a>{" "}
+            center.
+          </p>
+        </div>
+        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+          <a
+            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-39.5"
+            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className="dark:invert"
+              src="/vercel.svg"
+              alt="Vercel logomark"
+              width={16}
+              height={16}
+            />
+            Deploy Now
+          </a>
+          <a
+            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/8 px-5 transition-colors hover:border-transparent hover:bg-black/4 dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-39.5"
+            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Documentation
+          </a>
+        </div>
+      </main> */}
+    </div>
+  );
+}
+</file>
+
+</files>
